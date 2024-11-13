@@ -1,0 +1,91 @@
+.game {
+  text-align: center;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  font-size: 16px;
+}
+
+.game-container {
+  position: relative;
+  width: 1024px;
+  height: 685px;
+  /* height: 768px; */
+  border: 2px solid #000;
+  margin: 0 auto;
+  overflow: hidden;
+  background-color: skyblue;
+}
+
+.aircraft {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  /* background-color: red; */
+  border-radius: 50%;
+}
+
+.bird {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  /* background-color: white; */
+  border-radius: 50%;
+  animation: move-left 5s linear infinite;
+}
+
+.star {
+  /* background-color: green; */
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  /* background-color: gold; */
+  border-radius: 50%;
+  animation: drop-down 3s linear infinite;
+}
+
+.parachute {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  /* background-color: gold; */
+  border-radius: 50%;
+  animation: drop-down 3s linear infinite;
+}
+
+.fuel,
+.stars {
+  color: #000000cc;
+  position: absolute;
+  top: 10px;
+  font-size: 20px;
+  background: rgba(255, 255, 255, 0.7);
+  padding: 5px;
+}
+
+.fuel {
+  left: 10px;
+}
+.stars {
+  right: 10px;
+}
+
+@keyframes move-left {
+  from {
+    left: 100%;
+  }
+  to {
+    left: -30px;
+  }
+}
+
+@keyframes drop-down {
+  from {
+    top: -20px;
+  }
+  to {
+    top: 100%;
+  }
+}
